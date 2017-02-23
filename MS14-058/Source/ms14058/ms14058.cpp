@@ -390,7 +390,7 @@ LRESULT CALLBACK WndProcHook(int nCode, WPARAM wParam, LPARAM lParam)
 			if (UnhookWindowsHook(WH_CALLWNDPROC, WndProcHook))
 			{
 				lpPrevWndFunc = (WNDPROC)SetWindowLongA(pWndProcArgs->hwnd,
-					GWLP_WNDPROC,
+					GWL_WNDPROC,
 					(LONG)NewWndProc);
 			}
 		}
